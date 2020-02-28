@@ -131,11 +131,39 @@ public class SimpleList {
 	}
 	
 	/**
+	 * Get the first number in the list. Returns -1 if empty.
+	 * 
+	 * @return first Represents the first number of the list.
+	 */
+	public int first() {
+		if (count == 0) {
+			return -1;
+		}
+		return list[0];
+	}
+	
+	/**
+	 * Get the last number in the list. Returns -1 if empty.
+	 * 
+	 * @return last Represents the last number of the list.
+	 */
+	public int last() {
+		if (count == 0) {
+			return -1;
+		}
+		return list[count-1];
+	}
+	
+	/**
+	 * 
+	 */
+	
+	/**
 	 * Returns the number of elements in the array
 	 * 
 	 * @return count Represents the number of elements in the array
 	 */
-	public int count() {
+	public int size() {
 		return count;
 	}
 

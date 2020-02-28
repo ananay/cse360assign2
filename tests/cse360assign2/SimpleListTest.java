@@ -105,4 +105,54 @@ class SimpleListTest {
 		assertEquals("10 9 8 7 6 5 4 3 2 1 11 12 13", s.toString());
 	}
 	
+	/**
+	 * Tests if the first() method returns the first element
+	 */
+	@Test
+	void testFirst() {
+		SimpleList s = new SimpleList();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(4);
+		s.add(5);
+		s.add(6);
+		s.remove(6);
+		assertEquals(5, s.first());
+	}
+	
+	/**
+	 * Tests if the last() method returns the last element
+	 */
+	@Test
+	void testLast() {
+		SimpleList s = new SimpleList();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(4);
+		s.add(5);
+		s.add(6);
+		s.append(7);
+		s.remove(6);
+		assertEquals(7, s.last());
+	}
+	
+	/**
+	 * Tests if size() returns the number of possible locations in the list
+	 */
+	@Test
+	void testSize() {
+		SimpleList s = new SimpleList();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(4);
+		s.append(5);
+		s.append(6);
+		s.add(7);
+		s.remove(3);
+		assertEquals(6, s.size());
+	}
+	
 }
