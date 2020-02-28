@@ -155,4 +155,14 @@ class SimpleListTest {
 		assertEquals(6, s.size());
 	}
 	
+	/**
+	 * Checks first() and last() for empty list
+	 */
+	@Test
+	void checkForEmpty() {
+		SimpleList s = new SimpleList();
+		assertEquals(-1, s.first());
+		assertEquals(-1, s.last());
+	}
+	
 }
